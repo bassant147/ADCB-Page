@@ -1,0 +1,53 @@
+:root {
+	// COLORS
+
+	--text-on-white: #333f48;
+	--text-on-dark: #7e8589;
+	--red: #ee0008;
+	--red-dark: #bb0000;
+	--grey-border: #848a8e;
+	--grey-border-darker: #687175;
+	--grey-light: #cfd3ce;
+	--almost-white: #e9ede8;
+	--dark-background: #222831;
+
+	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	@include respond(tab-land) {
+		font-size: 56.25%;
+	}
+
+	@include respond(tab-port) {
+		font-size: 50%;
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%;
+	}
+}
+
+body {
+	font-family: "Museo Sans 500", sans-serif;
+	line-height: 1.6;
+	background-color: white;
+
+	@include respond(phone) {
+		line-height: 1;
+	}
+}

@@ -1,0 +1,210 @@
+.container {
+	position: relative;
+}
+
+.header {
+	height: 7rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-bottom: 1px solid var(--grey-light);
+
+	@include respond(phone) {
+		height: 5rem;
+		font-size: 1.3rem;
+	}
+
+	&__item {
+		display: block;
+		padding: 2.3rem 2.5rem;
+		text-decoration: none;
+		color: var(--red-dark);
+		font-family: "Roboto", sans-serif;
+		font-size: 1.5rem;
+		font-weight: 100;
+		transition: all 0.3s;
+
+		@include respond(phone) {
+			padding: 1rem 0.9rem;
+			font-size: 1.1rem;
+			text-align: center;
+		}
+
+		&:hover {
+			background-color: var(--grey-light);
+		}
+	}
+
+	&__icon-box {
+		display: flex;
+	}
+
+	&__icon {
+		align-self: center;
+		height: 5rem;
+		order: 2;
+
+		@include respond(phone) {
+			/* height: 2.5rem; */
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	&__title {
+		margin-top: 1rem;
+
+		@include respond(phone) {
+			/* margin-top: 0.5rem;
+			width: 100%; */
+			display: none;
+			visibility: hidden;
+		}
+
+		&-1 {
+			font-family: "Segoe UI", sans-serif;
+			color: var(--text-on-white);
+			font-size: 1.2rem;
+			font-weight: 700;
+
+			@include respond(phone) {
+				text-align: right;
+				font-size: 0.5rem;
+			}
+		}
+
+		&-2 {
+			margin-top: -1.6rem;
+			font-family: "Segoe UI", sans-serif;
+			color: var(--text-on-white);
+			font-size: 3.8rem;
+			text-align: right;
+
+			@include respond(phone) {
+				margin-top: 0;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+.content {
+	display: flex;
+	position: relative;
+	height: 89.5vh;
+	justify-content: center;
+}
+
+.logo {
+	display: none;
+	visibility: hidden;
+	@include respond(phone) {
+		z-index: 100;
+		visibility: visible;
+		display: block;
+		position: absolute;
+		top: 3rem;
+	}
+
+	&__icon-box {
+		display: none;
+		visibility: hidden;
+		@include respond(phone) {
+			display: flex;
+			visibility: visible;
+		}
+	}
+
+	&__icon {
+		@include respond(phone) {
+			align-self: center;
+			height: 4rem;
+			order: 2;
+			height: 2.5rem;
+		}
+	}
+
+	&__title {
+		@include respond(phone) {
+			margin-top: 1rem;
+			margin-top: 0.5rem;
+		}
+
+		&-1 {
+			@include respond(phone) {
+				font-family: "Segoe UI", sans-serif;
+				font-size: 1rem;
+				color: var(--almost-white);
+			}
+		}
+
+		&-2 {
+			@include respond(phone) {
+				margin-top: 0;
+				font-family: "Segoe UI", sans-serif;
+				text-align: right;
+				font-size: 2.8rem;
+				color: var(--almost-white);
+			}
+		}
+	}
+}
+
+.login {
+	position: relative;
+	height: 100%;
+	background-image: linear-gradient(
+			105deg,
+			rgba(#66727b, 0.7) 0%,
+			rgba(#66727b, 0.7) 50%,
+			transparent 50%
+		),
+		url(./../img/desk.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	display: block;
+	width: 100%;
+	padding-top: 2.5rem;
+
+	@include respond(tab-port) {
+		background-image: linear-gradient(
+				105deg,
+				rgba(#66727b, 0.7) 0%,
+				rgba(#66727b, 0.7) 60%,
+				transparent 50%
+			),
+			url(./../img/desk.jpg);
+
+		width: 100%;
+		box-shadow: none;
+	}
+
+	@include respond(phone) {
+		background-image: linear-gradient(
+				105deg,
+				rgba(#66727b, 0.7) 0%,
+				rgba(#66727b, 0.7) 100%
+			),
+			url(./../img/desk.jpg);
+
+		//width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.copyright {
+	position: absolute;
+	bottom: 1rem;
+	left: 5rem;
+	font-size: 1.2rem;
+	font-weight: 100;
+
+	@include respond(phone) {
+		font-size: 0.8rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

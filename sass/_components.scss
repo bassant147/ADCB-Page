@@ -1,0 +1,228 @@
+.form {
+	padding-left: 10rem;
+	padding-top: 3rem;
+	width: 35%;
+
+	@include respond(tab-land) {
+		margin-top: 7rem;
+		width: 40%;
+	}
+
+	@include respond(tab-port) {
+		width: 50%;
+		margin-top: 7rem;
+	}
+
+	@include respond(phone) {
+		padding-left: 0;
+		padding-top: 0;
+		margin-top: 10rem;
+		width: 100%;
+	}
+
+	&__title-box {
+		display: flex;
+		padding-bottom: 0.5rem;
+		width: 50%;
+		margin: 0 auto;
+		border-bottom: 0.5px solid var(--grey-border);
+		//
+
+		@include respond(tab-port) {
+			padding-bottom: 1rem;
+			margin-top: 4rem;
+			margin-bottom: 3rem;
+			width: 50%;
+		}
+
+		@include respond(phone) {
+			width: 100%;
+			border-bottom: none;
+			margin-top: 5rem;
+			justify-content: center;
+			margin: 0.8rem 0;
+		}
+	}
+
+	&__icon {
+		align-self: center;
+		margin-right: 0.6rem;
+		height: 1.4rem;
+
+		@include respond(tab-port) {
+			height: 2rem;
+		}
+
+		@include respond(phone) {
+			height: 1.3rem;
+		}
+	}
+
+	&__title {
+		align-self: center;
+		font-size: 1.7rem;
+		font-weight: 300;
+		color: var(--almost-white);
+
+		@include respond(tab-port) {
+			font-size: 1.5rem;
+		}
+
+		@include respond(phone) {
+			border-bottom: 1px solid var(--grey-border);
+			padding-bottom: 3px;
+			font-weight: 500;
+		}
+	}
+
+	&__content {
+		margin-top: 2rem;
+
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 3rem;
+		}
+	}
+
+	&__group {
+		width: 100%;
+		padding: 0.5rem 4rem;
+		position: relative;
+
+		@include respond(phone) {
+			width: 90%;
+			padding: 1rem 3rem;
+		}
+	}
+
+	&__input {
+		font-family: "Museo Sans 500", sans-serif;
+		font-size: 1.4rem;
+		display: block;
+		background-color: transparent;
+		color: var(--almost-white);
+		width: 100%;
+		padding: 1.5rem 2rem;
+		border: 1px solid var(--grey-light);
+		border-radius: 1rem;
+
+		transition: all 0.3s;
+
+		@include respond(phone) {
+			padding: 1rem 1.5rem;
+			font-size: 1.2rem;
+		}
+
+		@include respond(tab-port) {
+			padding: 1rem 1.5rem;
+		}
+
+		&:focus {
+			outline: none;
+			border: 1px solid var(--red);
+		}
+
+		&::-webkit-input-placeholder {
+			color: var(--almost-white);
+			font-family: "Museo Sans 500", sans-serif;
+			font-size: 1.4rem;
+
+			@include respond(phone) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__password-link {
+		position: absolute;
+		top: 6rem;
+		right: 5rem;
+		text-decoration: none;
+		color: var(--red-dark);
+		font-size: 1.1rem;
+	}
+
+	&__label {
+		font-family: "Museo Sans 500", sans-serif;
+		font-size: 1.4rem;
+		color: var(--almost-white);
+		margin-left: 2rem;
+		margin-top: 0.7rem;
+		display: block;
+		transition: all 0.3s;
+
+		@include respond(tab-port) {
+			margin-left: 1.7rem;
+			margin-top: 0.4rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+
+	&__btn-box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__btn {
+		width: 40%;
+		margin-top: 4rem;
+		padding: 1.5rem 2rem;
+		margin-bottom: 1rem;
+		background-color: var(--text-on-white);
+		border: 1px solid var(--grey-light);
+		border-radius: 1.6rem;
+		color: var(--almost-white);
+		font-family: "Museo Sans 500", sans-serif;
+		font-size: 1.4rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s;
+		transform: translateY(-1px);
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			transform: translateY(1px);
+		}
+
+		&:hover {
+			border: 1px solid var(--red);
+			background-color: var(--red);
+			color: var(--almost-white);
+		}
+
+		@include respond(tab-port) {
+			margin-top: 4rem;
+			padding: 1rem 1.5rem;
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&__text {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		color: var(--almost-white);
+		font-weight: 300;
+
+		@include respond(tab-port) {
+			margin-top: 1.6rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: var(--red-dark);
+		font-size: 1.3rem;
+	}
+}
