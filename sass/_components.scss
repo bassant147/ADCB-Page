@@ -3,20 +3,28 @@
 	padding-top: 3rem;
 	width: 35%;
 
+	@include respond(big-desktop) {
+		position: absolute;
+		top: 40%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+	}
+
 	@include respond(tab-land) {
 		margin-top: 7rem;
 		width: 40%;
 	}
 
 	@include respond(tab-port) {
-		width: 50%;
-		margin-top: 7rem;
+		padding-left: 6rem;
+		width: 60%;
+		margin-top: 20rem;
 	}
 
 	@include respond(phone) {
 		padding-left: 0;
 		padding-top: 0;
-		margin-top: 10rem;
+		margin-top: 13rem;
 		width: 100%;
 	}
 
@@ -113,10 +121,6 @@
 		@include respond(phone) {
 			padding: 1rem 1.5rem;
 			font-size: 1.2rem;
-		}
-
-		@include respond(tab-port) {
-			padding: 1rem 1.5rem;
 		}
 
 		&:focus {
